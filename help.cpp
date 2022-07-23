@@ -7,6 +7,7 @@ void myprint(){
 }
 
 int main() {
+    cout<<"im help func, now im doing: ";
     myprint();
     return 0;
 }
