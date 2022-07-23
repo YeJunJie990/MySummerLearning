@@ -1,14 +1,15 @@
 #include<bits/stdc++.h>
+#include<unistd.h>
+#include<sys/wait.h>
 
 using namespace std;
 
-class A{
-    int x;
-
-};
-
 int main() {
-    cout<<"hello,world"<<endl;
-
+    if (!fork()) {
+        cout<<"im child, doing: ";
+        execv("help", NULL);
+    }
+    waitpid();
+    cout<<"im father process"<<endl;
     return 0;
 }
