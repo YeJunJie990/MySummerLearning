@@ -7,47 +7,35 @@
 
 using namespace std;
 
-// int main() {
-//     int n;
-//     cin>>n;
-//     string num = to_string(n);
-//     set<char> appeared;
-//     string ans;
-//     for (int i = num.size() - 1; i >= 0; i--) {
-//         if (appeared.count(num[i])) continue;
-//         ans += num[i];
-//         appeared.insert(num[i]);
-//     }
-//     cout<<ans<<endl;
-//     return 0;
-// }
+class Box {
 
-typedef unsigned long long ll;
+public:
+ int a;
+ int b;
+ int c;
 
-bool isValid(ll n) {
-    string num = to_string(n);
-    int i = 1;
-    int k = 0;
-    while (i < num.size()) {
-        if (num[i] != num[i - 1]) k++;
-        i++; 
-    }
-    return k == 1;
-}
+ Box() {
+
+ }
+ Box(int a, int b, int c) {
+  this->a = a;
+  this->b = b;
+  this->c = c;
+ }
+
+ Box& operatro+(Box & aa, Box & bb) {
+    this->a = aa.a + bb.a;
+    this->b = aa.b + bb.b;
+    this->c = aa.c + bb.c;
+    return *this
+ }
+
+};
+
 
 int main() {
-    int n;
-    while (1) {
-        cin>>n;
-        if (n == 0) break;
-        int i = 1;
-        ll ans = -1;
-        while (ans == -1) {
-            ll cur = (ll) n * i;
-            if (isValid(cur)) ans = cur;
-            i++;
-        }
-        cout<<n<<": "<<ans<<endl;
-    }
+    Box a(1,1,1);
+    Box b(2,2,2);
+    auto c = a + b;
     return 0;
 }
