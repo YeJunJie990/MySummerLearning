@@ -71,9 +71,11 @@ void testVector()
     cout << "push_back:" << endl;
     demo1.push_back(2);
 
-    // testDemo t(1);
-    // testDemo & a = t;
-    // demo1.push_back(a);
+    // emplace_back:
+    // 调用构造函数
+    // push_back:
+    // 调用构造函数
+    // 调用移动构造函数
 }
 
 /*
@@ -98,7 +100,7 @@ void testIt() {
 
 int main() {
     //testSharePtr();
-    //testVector();
-    testIt();
+    testVector();
+    //testIt();
     return 0;
 }
