@@ -8,6 +8,10 @@ using namespace std;
 
 class MergeSort{
 public:
+    /*归并排序
+        排序时间稳定： O(nlgn)
+        额外空间需要：O(n) + 递归的栈空间  
+    */
     void merge(vector<int> & nums, int left, int mid, int right) { 
         //nums : 3 5 1 3 2 7 6
         //L : 3 5 1 3    R : 2 7 6
@@ -49,6 +53,11 @@ public:
 
 
 void InsertSort(vector<int> & nums) {
+    /*
+        插入排序
+        排序时间不稳定， 最坏是O(n^2)
+        空间复杂度 O(1)
+    */
     int n = nums.size();
     for (int i = 1; i < n; i++) {
         int key = nums[i];
