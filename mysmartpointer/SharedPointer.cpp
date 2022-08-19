@@ -147,7 +147,12 @@ public:
         my_ref_count->add();
     }
 
-    SharePtr& operator = (const SharePtr &p)
+    SharePtr& operator = (const SharePtr &p) {
+        this->my_ref_count = p.my_ref_count;
+        this->my_ptr = p.my_ptr;
+        this->my_ref_count->add();
+        return *this;
+    }
      
 
     SharePtr(SharePtr &&p)
@@ -158,7 +163,7 @@ public:
         p.my_ref_count = nullptr;
     }
 
-    SharePtr &operator =(SharePtr &&p)
+    SharePtr& operator =(SharePtr &&p)
     {
         clear();
         this->my_ptr = p.my_ptr;
