@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"/home/yejj/linuxlearning/SummerLearning/a.cpp","tests":[{"id":1661065622944,"input":"4\nad{XYZ}cdc{Y}f{x}e\nadcdcefdfeffe\nadcdcefdfeff\ndcdcefdfeffe\nadcdcfe","output":"True\nFalse\nFalse\nTrue"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/yejj/linuxlearning/SummerLearning/a.cpp","group":"local","local":true}
